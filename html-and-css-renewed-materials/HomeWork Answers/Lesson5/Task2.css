@@ -1,0 +1,35 @@
+h2 
+{
+    font-family: Calibri;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: deeppink;
+}
+p 
+{
+    font-family: Segoe UI;
+}
+hr 
+{
+    color: black;
+    align-content: center;
+    width: 600px;
+}
+ol li 
+{
+    font-family:Segoe UI; 
+}
+h1 
+{
+    font-family: Calibri;
+    text-align: center
+}
+i 
+{
+    font-family: Calibri;
+}
+h5 
+{
+    font-weight: bold;
+}

@@ -1,0 +1,157 @@
+﻿<!--
+
+Создайте форму со следующими полями:
+
+Текстовые поля по 50 символов с максимальной длиной 50
+                                                            Имя 
+                                                            Фамилия 
+                                                            Отчество
+Радио-переключатель
+                            Пол(М/Ж)
+
+Выпадающий список
+                            Выбор курса(C# Essential, C# Professional, HTML, CSS, JavaScript, jQuery)
+
+Группа флажков
+                            Выбор пройденных курсов (C# Essential, C# Professional, HTML, CSS, JavaScript, jQuery)
+
+Многострочное поле для ввода
+                            Дополнительные сведения
+Кнопки
+                            Кнопки отправки на сервер и очистки полей
+
+-->
+<html>
+<head>
+    <title>AddTasks3</title>
+    <style type="text/css">
+        .fieldset {
+            width: 420px;
+            border-style: solid;
+            border-color: black;
+        }
+
+        .select {
+            width: 390px;
+            height: 90px;
+        }
+
+        sub {
+            font-family: cursive;
+            opacity: 0.5;
+            font-size: 8px;
+            float: right;
+        }
+
+        input {
+            float: right;
+            width: 280px;
+        }
+
+        .radio {
+            width: 20px;
+        }
+
+        textarea {
+            width: 390px;
+            resize: none;
+        }
+
+        .button {
+            float: none;
+            width: 75px;
+            height: 50px;
+            border-radius: 10px/10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset class="fieldset">
+            <legend>Данные о пользователе</legend>
+            <div>
+                <br />
+                <span>Имя</span>
+                <input type="text" name="FirstName" title="Введите имя" maxlength="50" size="50" />
+                <sub>Максимальная длинна 59 знаков. Не используйте спецсимволы</sub>
+                <br />
+            </div>
+            <div>
+                <br />
+                <span>Фамилия</span>
+                <input type="text" name="LastName" title="Введите фамилию" maxlength="50" size="50" />
+                <sub>Максимальная длинна 59 знаков. Не используйте спецсимволы</sub>
+                <br />
+            </div>
+            <div>
+                <br />
+                <span>Отчество</span>
+                <input type="text" name="Otchestvo" title="Введите отчество" maxlength="50" size="50" />
+                <sub>Максимальная длинна 59 знаков. Не используйте спецсимволы</sub>
+                <br />
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td><span>Пол</span></td>
+                        <td>&nbsp;</td>
+                        <td><span>Мужской</span></td>
+                        <td>
+                            <input class="radio" type="radio" name="sex" value="Man" /></td>
+                        <td><span>Женский</span></td>
+                        <td>
+                            <input class="radio" type="radio" name="sex" value="Woman" /></td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+        </fieldset>
+        <fieldset class="fieldset">
+            <legend>Данные о курсах</legend>
+            <fieldset style="border-style: dashed">
+                <legend>Выбор курса</legend>
+                <select class="select" name="SelectedCourses" multiple="multiple">
+                    <optgroup label=".NET">
+                        <option>С# Starter</option>
+                        <option>C# Essential</option>
+                        <option>C# Professional</option>
+                        <option>SQL</option>
+                    </optgroup>
+                    <optgroup label="FrontEnd">
+                        <option>HTML & CSS</option>
+                        <option>Bootstrap 3</option>
+                        <option>JS Essential</option>
+                        <option>JS Advsnced</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <fieldset style="border-style: dashed">
+                <legend>Пройденые курсы</legend>
+                <div>
+                    <input type="checkbox" name="FinishedCourses" value="Starter" />С# Starter
+                </div>
+                <div>
+                    <input type="checkbox" name="FinishedCourses" value="Essential" />C#Essential
+                </div>
+                <div>
+                    <input type="checkbox" name="FinishedCourses" value="Professional" />C#Professional
+                </div>
+                <div>
+                    <input type="checkbox" name="FinishedCourses" value="SQL" />SQL
+                </div>
+                <div>
+                    <span>Дополнительные сведенья</span><br />
+                    <textarea name="textarea" rows="3"></textarea>
+                </div>
+            </fieldset>
+        </fieldset>
+        <br />
+        <div style="float: left; margin-right: 10px">
+            <input type="reset" name="Reset" value="Очистить" class="button" />
+        </div>
+        <div style="float:left">
+            <input type="submit" name="Send" value="Отправить" class="button" />
+        </div>
+    </form>
+</body>
+</html>
